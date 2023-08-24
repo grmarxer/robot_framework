@@ -37,7 +37,18 @@ sudo yum install xrdp -y
 sudo systemctl enable xrdp  
 sudo systemctl start xrdp  
 
-systemctl status xrdp  
+systemctl status xrdp   
+
+be sure to set encryption to RDP for Windows RDP to work  
+vi /etc/xrdp/xrdp.ini  
+```
+; security layer can be 'tls', 'rdp' or 'negotiate'
+; for client compatible layer
+#security_layer=negotiate
+security_layer=rdp
+```
+
+
 netstat -a -n -p  | grep 3389  
 
 <br/>  
