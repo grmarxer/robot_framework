@@ -112,3 +112,9 @@ If you want to load a file with all variables, write it in bash file then run it
 [robot@centos8 test-suites]$ which robot  
 ~/.local/bin/robot  
 
+
+##### Run a test changing name of logs files and using time stamps  
+
+```
+robot --log mylog.html --report myreport.html --output myoutput.xml --timestampoutputs  vz_example_gm.robot
+```

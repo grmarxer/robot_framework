@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    /home/robot/git/robotframework-f5networks/F5NetworksTMOSiControl.robot
 
+
 *** Variables ***
 ${BIGIP_PRIMARY_MGMT_IP}    192.168.2.91
 ${SSH_USERNAME}    root
@@ -18,4 +19,4 @@ Test Verify BIG-IP Version
 GET Query NTP Server List
     Set Log Level    trace
     Query NTP Server List    bigip_host=${BIGIP_PRIMARY_MGMT_IP}    bigip_username=${HTTP_USERNAME}    bigip_password=${HTTP_PASSWORD}
-	
+
