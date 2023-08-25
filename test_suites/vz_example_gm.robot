@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    /home/robot/git/robotframework-f5networks/F5NetworksTMOSiControl.robot
+Resource    /home/robot/git/robot_framework/library/F5NetworksTMOSiControl.robot
 
 
 *** Variables ***
