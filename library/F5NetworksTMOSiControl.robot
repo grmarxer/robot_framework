@@ -2191,7 +2191,7 @@ Query NTP Server List
     ${api_response_json}    To Json    ${api_response.content}
     Log To Console    "api-response content" ${api_response.content} 
     ${ntp_servers_configured}    Get from Dictionary    ${api_response_json}    servers
-    Log    "api-response_json" ${api_response_json} console=True
+    Log To Console   "api-response_json" ${api_response_json}
     ${ntp_servers_configured}    Convert to List    ${ntp_servers_configured}
     List Should Not Contain Duplicates    ${ntp_servers_configured}
     [Return]    ${ntp_servers_configured}
