@@ -2188,7 +2188,8 @@ Query NTP Server List
     ${api_uri}    set variable    /mgmt/tm/sys/ntp
     ${api_response}    BIG-IP iControl BasicAuth GET   bigip_host=${bigip_host}    bigip_username=${bigip_username}    bigip_password=${bigip_password}    api_uri=${api_uri}
     Should Be Equal As Strings    ${api_response.status_code}    ${HTTP_RESPONSE_OK}
-    ${api_response_json}    To Json    ${api_response.content}
+    #${api_response_json}    To Json    ${api_response.content}
+    ${api_response_json}    Get Json Value   ${api_response.json()}
     Log    "api-response content" ${api_response.content} console=True
     ${ntp_servers_configured}    Get from Dictionary    ${api_response_json}    servers
     Log    "api-response_json" ${api_response_json} console=True
