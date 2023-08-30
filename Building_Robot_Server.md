@@ -100,6 +100,11 @@ robotframework in /home/robot/.local/lib/python3.11/site-packages
 pip3 install robotframework-SSHLibrary  
 pip3 install robotframework-SnmpLibrary  
 pip3 install robotframework-requests  
+pip3 install --upgrade robotframework-seleniumlibrary  
+pip3 install robotframework-requests  
+pip3 install robotframework-browser  
+pip3 install robotframework-debuglibrary  
+pip3 pip install -U robotframework-difflibrary
 
 <br/>  
 
