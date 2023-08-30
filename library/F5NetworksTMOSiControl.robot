@@ -2170,7 +2170,7 @@ Configure Console Inactivity Timeout on BIG-IP
 
 ############
 ## sys ntp
-############
+############NTP
 
 Configure NTP Server List
     [Documentation]    Declaratively sets the list of NTP servers on a BIG-IP (https://support.f5.com/csp/article/K13380)
@@ -2797,6 +2797,7 @@ Retrieve BIG-IP Version
     ${api_auth}    create list    ${bigip_username}    ${bigip_password}
     ${api_uri}    set variable    /mgmt/tm/sys/version
     ${api_response}    BIG-IP iControl BasicAuth GET   bigip_host=${bigip_host}    bigip_username=${bigip_username}    bigip_password=${bigip_password}    api_uri=${api_uri}
+    Log    "log api headers" &{api_headers}
     should be equal as strings    ${api_response.status_code}    ${HTTP_RESPONSE_OK}
     Log    "Log API RESPONSE:" ${api_response}
     [Return]    ${api_response}
