@@ -2798,7 +2798,7 @@ Retrieve BIG-IP Version
     ${api_uri}    set variable    /mgmt/tm/sys/version
     ${api_response}    BIG-IP iControl BasicAuth GET   bigip_host=${bigip_host}    bigip_username=${bigip_username}    bigip_password=${bigip_password}    api_uri=${api_uri}
     should be equal as strings    ${api_response.status_code}    ${HTTP_RESPONSE_OK}
-    Log    API RESPONSE: ${api_response.content}
+    Log    "API RESPONSE:" ${api_response}
     [Return]    ${api_response}
 
 Retrieve BIG-IP Version using Token Authentication
