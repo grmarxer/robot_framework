@@ -104,6 +104,7 @@ pip3 install --upgrade robotframework-seleniumlibrary
 pip3 install robotframework-browser  
 pip3 install robotframework-debuglibrary  
 pip3 install -U robotframework-difflibrary
+pip3 install -U robotframework-JSONLibrary
 
 <br/>  
 
